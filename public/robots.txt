@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://simplefinanceguide.com/sitemap.xml
+Sitemap: https://simple-finance-guide.github.io/sitemap.xml
