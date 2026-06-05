@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-sans: "Aptos", "Segoe UI", sans-serif;
+  --bg: #ffffff;
+  --bg-elevated: #fbfdfb;
+  --surface: #ffffff;
+  --surface-alt: #fbfdfb;
+  --ink: #17201b;
+  --muted: #5c6b62;
+  --muted-strong: #253129;
+  --border: #d9f2e1;
+  --link: #147044;
+  --link-hover: #0f5a37;
+  --shadow-color: rgba(23, 32, 27, 0.08);
+}
+
+html.dark {
+  color-scheme: dark;
+  --bg: #0d1310;
+  --bg-elevated: #131a16;
+  --surface: #111813;
+  --surface-alt: #17201b;
+  --ink: #edf4ef;
+  --muted: #b3c0b8;
+  --muted-strong: #dfe8e2;
+  --border: #26312c;
+  --link: #7bd9a0;
+  --link-hover: #a7f0c0;
+  --shadow-color: rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(25, 135, 84, 0.12), transparent 34rem),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-elevated) 100%);
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.article-content {
+  color: var(--muted-strong);
+}
+
+.article-content h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.85rem;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.article-content h3 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.65rem;
+  font-size: 1.25rem;
+  color: var(--ink);
+}
+
+.article-content p,
+.article-content li {
+  font-size: 1.06rem;
+  line-height: 1.85;
+}
+
+.article-content ul,
+.article-content ol {
+  padding-left: 1.35rem;
+}
+
+.article-content a {
+  color: var(--link);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+.article-content th,
+.article-content td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.9rem;
+  text-align: left;
+}
+
+.article-content th {
+  background: var(--surface-alt);
+}
