@@ -21,6 +21,7 @@ jobs:
     env:
       NEXT_PUBLIC_SITE_URL: https://simple-finance-guide.github.io
       NEXT_PUBLIC_SITE_NAME: Simple Finance Guide
+      NEXT_PUBLIC_ADSENSE_CLIENT_ID: ca-pub-6876751836203597
     steps:
       - name: Checkout
         uses: actions/checkout@v4
