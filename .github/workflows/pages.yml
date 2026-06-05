@@ -40,6 +40,9 @@ jobs:
       - name: Build static site
         run: npm run build
 
+      - name: Verify static export
+        run: test -f out/index.html && test -f out/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
