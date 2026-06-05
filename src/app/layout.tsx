@@ -32,6 +32,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {adsenseClient ? <meta name="google-adsense-account" content={adsenseClient} /> : null}
+      </head>
       <body className="min-h-screen bg-[var(--bg)] text-[var(--ink)] transition-colors duration-200">
         <ThemeBootstrap />
         {adsenseClient ? (
